@@ -55,3 +55,6 @@ dkms.conf
 *.dwo
 
 bin/
+
+## Ignore the root filesystem build output directory even though the development machine is not expected to have it. This is to prevent accidentally committing the build output if the build directory is created in the root of the repository.
+rootfs/
