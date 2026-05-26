@@ -21,4 +21,14 @@ clean:
 	@rm -rf $(BIN_DIR)
 	@echo "Clean completed successfully."
 
-.PHONY: build clean
+help:
+	@echo "Usage:"
+	@echo "  make build   - Build the project."
+	@echo "  make clean   - Clean the build artifacts."
+	@echo "  make help    - Display this help message."
+
+run: build
+	@echo "Running the project..."
+	@./$(BIN_DIR)/linux-usr-space-builder
+
+.PHONY: build clean help run
